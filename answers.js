@@ -45,16 +45,16 @@ console.log(multNumbers(3,4));// when i do not input a non-number, it gitve me a
 //If the string is ‘subtract’, return the difference. 
 //If the string is ‘mult’, return the product. If the string is ‘div’, return the ratio. Otherwise return 0.
 var numberOperation = function (num1, num2, strg){
-    if (strg == 'add'){
+    if (strg === 'add'){
         return (num1 + num2);
     }
-    else if (strg == 'substract'){
+    else if (strg === 'substract'){
         return (num1 - num2);
     }
-    else if (strg == 'mult'){
+    else if (strg === 'mult'){
         return (num1 * num2);
     }
-    else if (strg == 'div'){
+    else if (strg === 'div'){
         return (num1, num2);
     }
     else {
@@ -67,7 +67,7 @@ console.log(numberOperation(2, 4, "add"));
 //Write a function that takes a string and a number, and returns the string repeated that many number of times. 
 //Test your function with various inputs.
 var howManyTimes = function (strg, num){
-  for (i = 1;  i < strg.length; i++){
+  for (var i = 1;  i < strg.length; i++){
       console.log(strg) * 3;
   }  
 };
@@ -75,3 +75,12 @@ howManyTimes("cool", 3);
 
 //Write a function that takes a string, and returns the reverse of that string. 
 //For example, if you pass the function the string “hello”, it should return “olleh”. Test your function on a few inputs, including the empty string.
+var reverse = [];
+var reverseString = function (strg){
+    var i = strg.length - 1;
+    for ( i ; i >= 0; i--){
+        reverse.push(strg[i]);
+    }
+};
+reverseString("hello");
+console.log(reverse.join(""))
