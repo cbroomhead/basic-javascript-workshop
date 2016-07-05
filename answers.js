@@ -84,3 +84,17 @@ var reverseString = function (strg){
 };
 reverseString("hello");
 console.log(reverse.join(""))
+
+//Write a function that takes a number and returns the factorial of a number. 
+//The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. Test your input on a few numbers, including negative numbers.
+
+var operation = 1;
+var i = 1;
+var factorial = function(number) {
+while ( i <= number){
+    operation = operation * i;
+    i++;
+}
+    console.log(operation);
+};
+factorial(7);
