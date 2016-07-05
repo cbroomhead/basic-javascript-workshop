@@ -33,7 +33,11 @@ var addNumbers = function (num1, num2){
 };
 console.log(addNumbers(1, 3)); // when i do not input a number, it gitve me a reference error that the non-number if undefined
 
-
-
+//Write a function that takes two numbers and multiplies them together. 
+//Test your function on a few inputs. Write in your comments what happens when you pass something other than a number to your function.
+var multNumbers = function (num1, num2){
+    return (num1 * num2);
+};
+console.log(multNumbers(3,num1));
 
 
