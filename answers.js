@@ -31,13 +31,36 @@ console.log(stringNumber("alphabet", 3));
 var addNumbers = function (num1, num2){
     return (num1 + num2);
 };
-console.log(addNumbers(1, 3)); // when i do not input a number, it gitve me a reference error that the non-number if undefined
+console.log(addNumbers(1, 3)); // when i do not input a non-number, it gitve me a reference error that the non-number if undefined
 
 //Write a function that takes two numbers and multiplies them together. 
 //Test your function on a few inputs. Write in your comments what happens when you pass something other than a number to your function.
 var multNumbers = function (num1, num2){
     return (num1 * num2);
 };
-console.log(multNumbers(3,num1));
+console.log(multNumbers(3,4));// when i do not input a non-number, it gitve me a reference error that the non-number if undefined
 
 
+//Write a function that takes two numbers and a string. If the string is ‘add’, then return the sum of the numbers. 
+//If the string is ‘subtract’, return the difference. 
+//If the string is ‘mult’, return the product. If the string is ‘div’, return the ratio. Otherwise return 0.
+var numberOperation = function (num1, num2, strg){
+    if (strg == 'add'){
+        return (num1 + num2);
+    }
+    else if (strg == 'substract'){
+        return (num1 - num2);
+    }
+    else if (strg == 'mult'){
+        return (num1 * num2);
+    }
+    else if (strg == 'div'){
+        return (num1, num2);
+    }
+    else {
+        return 0;
+    }
+
+};
+
+console.log(numberOperation(2, 4, "add"));
