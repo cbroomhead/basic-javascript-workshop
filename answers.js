@@ -141,3 +141,30 @@ var capitalizeAllWords = function (strng){
 };
 
 console.log(capitalizeAllWords("this bootcamp is hurting my brain!"));
+
+//Write a function that takes an array and returns the largest number of the array. Test your function on a few inputs.
+var largestNumber = function (array) {
+    var lar = 0;
+    for (var i = 0 ; i < array.length; i++){
+        if (array[i] > lar){
+            lar = array[i];
+        }
+    }
+return lar;
+};
+
+console.log(largestNumber([10, 232, 65]));
+
+//Write a function that takes an array, and returns a filtered array. 
+//The filtered array should only contain the truthy values from the initial array. 
+//Hint: there is an array method called filter that can help you with this :)
+var arrayFiltered = function (array){
+    var filtered = array.filter(function(ele){
+    if(ele){
+        return ele;
+    }
+    })
+      return filtered;
+};
+console.log(arrayFiltered([0, true, false, 23, "", null, 1]));
+
