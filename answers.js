@@ -60,7 +60,18 @@ var numberOperation = function (num1, num2, strg){
     else {
         return 0;
     }
-
 };
 
 console.log(numberOperation(2, 4, "add"));
+
+//Write a function that takes a string and a number, and returns the string repeated that many number of times. 
+//Test your function with various inputs.
+var howManyTimes = function (strg, num){
+  for (i = 1;  i < strg.length; i++){
+      console.log(strg) * 3;
+  }  
+};
+howManyTimes("cool", 3);
+
+//Write a function that takes a string, and returns the reverse of that string. 
+//For example, if you pass the function the string “hello”, it should return “olleh”. Test your function on a few inputs, including the empty string.
