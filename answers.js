@@ -88,16 +88,7 @@ console.log(reverse.join(""))
 //Write a function that takes a number and returns the factorial of a number. 
 //The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. Test your input on a few numbers, including negative numbers.
 
-var operation = 1;
-var i = 1;
-var factorial = function(number) {
-while ( i <= number){
-    operation = operation * i;
-    i++;
-}
-    console.log(operation);
-};
-factorial(5); //looks like the factorial of a negative number is always 1
+//looks like the factorial of a negative number is always 1
 
 //factorial with for loop
 var factorial2 = function(num){
@@ -160,11 +151,22 @@ console.log(largestNumber([10, 232, 65]));
 //Hint: there is an array method called filter that can help you with this :)
 var arrayFiltered = function (array){
     var filtered = array.filter(function(ele){
-    if(ele){
-        return ele;
-    }
+        if(ele){
+            return ele;
+        }
     })
       return filtered;
 };
 console.log(arrayFiltered([0, true, false, 23, "", null, 1]));
+
+//Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
+var sumArray = function (array){
+    var operation = 0;
+    for (i=0; i< array.length ; i++){
+        operation = operation + array[i];
+    }
+    return operation;
+};
+
+console.log(sumArray([1,4,6,7,8]));
 
