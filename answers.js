@@ -118,7 +118,6 @@ console.log(factorial2(5));
 //If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
 var longestString = function (strng){
     var result = strng.split(" ");
-    
     var len = '';
     for (i = 0 ; i < result.length; i++){
         if (result[i].length > len.length){
@@ -128,3 +127,17 @@ var longestString = function (strng){
     return len;
 };
 console.log(longestString ("This bootcamp is hurting my brain!"));
+
+//Write a function that takes a phrase, and returns the same phrase with every word capitalized. 
+//For example, if you pass your function "hello world", it should return "Hello World" and if you pass it "HELLO WORLD" or even "HeLLo WoRLD", 
+//it will also return "Hello World". Test your function of a few inputs.
+
+var capitalizeAllWords = function (strng){
+    var result = strng.toLowerCase().split(" ");
+       for(i = 0; i < result.length; i++){
+            result[i] = result[i].charAt(0).toUpperCase() + result[i].substring(1);
+       }
+       return result.join(" ");
+};
+
+console.log(capitalizeAllWords("this bootcamp is hurting my brain!"));
