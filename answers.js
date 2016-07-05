@@ -97,4 +97,34 @@ while ( i <= number){
 }
     console.log(operation);
 };
-factorial(7);
+factorial(5); //looks like the factorial of a negative number is always 1
+
+//factorial with for loop
+var factorial2 = function(num){
+    var operation = 1;
+    if(num === 0){
+        return 1;
+    }
+    for (var i = 1; i <= num; i++){
+        operation = operation * i;
+    }
+    return operation;
+    
+};
+console.log(factorial2(5));
+
+
+//Write a function that takes a phrase as a string, and returns the longest word in that phrase. 
+//If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
+var longestString = function (strng){
+    var result = strng.split(" ");
+    
+    var len = '';
+    for (i = 0 ; i < result.length; i++){
+        if (result[i].length > len.length){
+            len = result[i];
+        }
+    }
+    return len;
+};
+console.log(longestString ("This bootcamp is hurting my brain!"));
