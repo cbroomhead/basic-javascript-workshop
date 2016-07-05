@@ -170,3 +170,21 @@ var sumArray = function (array){
 
 console.log(sumArray([1,4,6,7,8]));
 
+//Write a function that takes two arrays, and returns an array of all elements that are only in one array. 
+//For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. 
+//Test your function on different inputs. Hint: you should look up array methods indexOf and slice
+var combineArrays = function (arr1, arr2){
+    var result =[];
+ for (var i =0 ; i < arr1.length; i++){
+    if(arr2.indexOf(arr1[i]) === -1){
+        result.push(arr1[i]);
+    }
+ }
+  for (var i =0 ; i < arr2.length; i++){
+    if(arr1.indexOf(arr2[i]) === -1){
+        result.push(arr2[i]);
+    }
+ }
+ return result;
+};
+console.log(combineArrays([12, 34, 56, 67], [56, 67, 78, 89]));
