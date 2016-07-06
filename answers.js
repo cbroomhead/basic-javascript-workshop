@@ -188,3 +188,18 @@ var combineArrays = function (arr1, arr2){
  return result;
 };
 console.log(combineArrays([12, 34, 56, 67], [56, 67, 78, 89]));
+
+//Mini Challenge: write a function that takes an array and a function as arguments. 
+//The function should return a new array that maps every element of the input array by passing it through the function you received. 
+//You are not allowed to use Array.map for this challenge, otherwise it would be too easy :)
+
+var mapFunction = function (arr, func){
+    var newarray= [];
+    for (var i =0 ; i < arr.length; i++){
+       // func(arr[i]);
+        newarray.push(func(arr[i]));
+    }
+    return newarray;
+}
+
+console.log(mapFunction(["apple","orange","banana","straw"], firstLetter));
